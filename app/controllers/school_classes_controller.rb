@@ -4,10 +4,6 @@ class SchoolClassesController < ApplicationController
       @school_class = SchoolClass.new
     end
 
-    def show
-      @school_class = SchoolClass.all
-    end
-
     def create
       @school_class = SchoolClass.new(params.require(:school_class))
       @school_class.save
