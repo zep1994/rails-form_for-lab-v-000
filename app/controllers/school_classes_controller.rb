@@ -1,10 +1,10 @@
 class SchoolClass < ApplicationController
     def show
-      @school_classes = SchoolClass.all
+      @school_class = SchoolClass.all
     end
 
     def create
-      
+      @school_class = SchoolClass.new(params.require(:school_class))
     end
 
     def show
