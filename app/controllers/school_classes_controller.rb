@@ -23,9 +23,9 @@ class SchoolClassesController < ActionController::Base
     end
 
     def update
-        @school_class = SchoolClass.find(params[:id])
-        @school_class.update(class_params)
-        redirect_to school_class_path(@school_class)
+      @school_class = SchoolClass.find(params[:id])
+      @school_class.update(class_params)
+      redirect_to school_class_path(@shcool_class)
     end
 
     def class_params
