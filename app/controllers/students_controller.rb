@@ -1,15 +1,11 @@
-class StudentsController < ActionController::Base
-
-  def index
-    @students = Student.all
-  end
+class StudentsController < ApplicationController
 
   def new
     @student = Student.new
   end
 
-   def create
-    @student = Student.new(student_params)
+  def create
+    @student = Student.new(params.require(:student))
     @student.save
     redirect_to student_path(@student)
   end
@@ -28,11 +24,4 @@ class StudentsController < ActionController::Base
     redirect_to student_path(@student)
   end
 
-
-
-
-   def student_params
-    params.require(:student).permit(:first_name, :last_name)
-  end
-
-end 
+end
