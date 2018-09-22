@@ -4,7 +4,7 @@ class SchoolClass < ApplicationController
     end
 
     def create
-
+      
     end
 
     def show
