@@ -1,4 +1,4 @@
-class SchoolClass < ApplicationController
+class SchoolClassController < ApplicationController
     def show
       @school_class = SchoolClass.all
     end
